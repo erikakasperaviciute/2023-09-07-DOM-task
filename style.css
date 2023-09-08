@@ -1,0 +1,165 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.container {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+}
+
+.shop-info {
+    padding: 15px 35px 20px 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacts-info {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacts-info li {
+    font-weight: bolder;
+}
+
+.contacts-info a {
+    text-decoration: none;
+    font-weight: 400;
+    color: darkslateblue;
+}
+
+/* Desktop first  */
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+.shops-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+@media (max-width: 1245px) {
+    .main-wrapper {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media (max-width: 1105px) {
+
+    .main-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shops-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    .main-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .shops-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .map-container {
+        order: -1;
+    }
+}
+
+@media (max-width: 575px) {
+    .shops-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    iframe {
+        height: 400px;
+    }
+}
+
+/* Mobile first */
+
+
+/* .main-wrapper {
+    display: grid;
+    gap: 30px;
+}
+
+.shops-wrapper {
+    display: grid;
+    gap: 18px;
+}
+
+.map-container {
+    order: -1;
+}
+
+iframe {
+    height: 400px;
+}
+
+@media (min-width: 550px) {
+    .shops-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    .main-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .shops-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        order: 1;
+    }
+
+    iframe {
+        height: 650px;
+    }
+}
+
+@media (min-width:1280px) {
+
+    .main-wrapper {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .shops-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1440px) {
+    .main-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+} */
